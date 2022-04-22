@@ -1,0 +1,73 @@
+2022-04-21T13:28:17.393Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-21T13:28:17.541Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-21T13:28:17.545Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:28:17', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:28:17', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-21T13:28:17.556Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-21T13:28:17.575Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:28:17', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:28:17', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-21T13:28:17.587Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
+2022-04-21T13:28:31.988Z -  [INFO ] - Executing (default): INSERT INTO `users` (`uuid`,`name`,`age`,`email`,`phone`,`address`,`aadhar`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?,?,?);
+2022-04-21T13:28:32.021Z -  [INFO ] - Executing (default): INSERT INTO `companies` (`doc_id`,`Company`,`pos`,`location`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);
+2022-04-21T13:28:32.042Z -  [INFO ] - Created New User with the following unique ID : 2
+2022-04-21T13:28:57.227Z -  [INFO ] - Executing (default): DELETE FROM `users` WHERE `aadhar` = 1002
+2022-04-21T13:28:57.258Z -  [INFO ] - Executing (default): DELETE FROM `companies` WHERE `doc_id` = 1002
+2022-04-21T13:28:57.261Z -  [INFO ] -  Deleted user with document ID  1002
+2022-04-21T13:29:57.190Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-21T13:29:57.284Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-21T13:29:57.287Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:29:57', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:29:57', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-21T13:29:57.297Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-21T13:29:57.308Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:29:57', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:29:57', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-21T13:29:57.318Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
+2022-04-21T13:33:13.215Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-21T13:33:13.392Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-21T13:33:13.395Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:33:13', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:33:13', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-21T13:33:13.407Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-21T13:33:13.418Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:33:13', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:33:13', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-21T13:33:13.440Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
+2022-04-21T13:36:10.631Z -  [INFO ] - Executing (default): INSERT INTO `users` (`uuid`,`name`,`age`,`email`,`phone`,`address`,`aadhar`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?,?,?);
+2022-04-21T13:36:10.661Z -  [INFO ] - Executing (default): INSERT INTO `companies` (`doc_id`,`Company`,`pos`,`location`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?);
+2022-04-21T13:36:10.692Z -  [INFO ] - Created New User with the following unique ID : 2
+2022-04-21T13:36:22.022Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-21T13:36:22.132Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-21T13:36:22.135Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:36:21', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:36:21', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-21T13:36:22.147Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-21T13:36:22.163Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:36:21', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:36:21', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-21T13:36:22.172Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
+2022-04-21T13:36:30.727Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-21T13:36:30.856Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-21T13:36:30.861Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:36:30', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:36:30', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-21T13:36:30.873Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-21T13:36:30.881Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:36:30', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:36:30', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-21T13:36:30.890Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
+2022-04-21T13:36:46.482Z -  [ERROR] - DELETE USER QUERY FAILED
+2022-04-21T13:36:46.483Z -  [INFO ] -  Deleted user with document ID  1001
+2022-04-21T13:44:56.148Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-21T13:44:56.308Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-21T13:44:56.313Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:44:56', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:44:56', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-21T13:44:56.325Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-21T13:44:56.334Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:44:56', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:44:56', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-21T13:44:56.344Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
+2022-04-21T13:45:11.534Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-21T13:45:11.662Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-21T13:45:11.669Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:45:11', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:45:11', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-21T13:45:11.683Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-21T13:45:11.694Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:45:11', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:45:11', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-21T13:45:11.703Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
+2022-04-21T13:45:49.779Z -  [ERROR] - Could not find user details
+2022-04-21T13:45:49.779Z -  [INFO ] -  Displayed User Details with Document  ID as  1002
+2022-04-21T13:52:53.724Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-21T13:52:53.850Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-21T13:52:53.854Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:52:53', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:52:53', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-21T13:52:53.865Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-21T13:52:53.877Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:52:53', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:52:53', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-21T13:52:53.888Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
+2022-04-21T13:53:24.619Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-21T13:53:24.725Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-21T13:53:24.728Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:53:24', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:53:24', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-21T13:53:24.740Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-21T13:53:24.753Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:53:24', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-21 13:53:24', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-21T13:53:24.764Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
+2022-04-22T05:56:44.666Z -  [INFO ] - app is listening at http://localhost:${PORT}
+2022-04-22T05:56:44.775Z -  [INFO ] - Executing (default): SELECT 1+1 AS result
+2022-04-22T05:56:44.777Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `users` (`uuid` INTEGER NOT NULL, `name` VARCHAR(255) NOT NULL, `age` INTEGER NOT NULL, `email` VARCHAR(255) NOT NULL, `phone` INTEGER NOT NULL, `address` VARCHAR(255) NOT NULL, `aadhar` INTEGER NOT NULL , `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-22 05:56:44', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-22 05:56:44', PRIMARY KEY (`aadhar`)) ENGINE=InnoDB;
+2022-04-22T05:56:44.792Z -  [INFO ] - Executing (default): SHOW INDEX FROM `users`
+2022-04-22T05:56:44.809Z -  [INFO ] - Executing (default): CREATE TABLE IF NOT EXISTS `companies` (`doc_id` INTEGER , `Company` VARCHAR(255) NOT NULL, `pos` VARCHAR(255) NOT NULL, `location` VARCHAR(255) NOT NULL, `createdAt` DATETIME(6) NOT NULL DEFAULT '2022-04-22 05:56:44', `updatedAt` DATETIME(6) NOT NULL DEFAULT '2022-04-22 05:56:44', PRIMARY KEY (`doc_id`), FOREIGN KEY (`doc_id`) REFERENCES `users` (`aadhar`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2022-04-22T05:56:44.819Z -  [INFO ] - Executing (default): SHOW INDEX FROM `companies`
