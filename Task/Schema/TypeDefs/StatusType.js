@@ -11,8 +11,6 @@ const {
 const StatusType = new GraphQLObjectType({
     name: 'status',
     fields: () => ({
-        aadhar:{type:GraphQLInt},
-
         success: { type: GraphQLString },
         message: { type: GraphQLString },
         error: { type: GraphQLString },

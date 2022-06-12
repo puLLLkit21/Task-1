@@ -1,38 +1,47 @@
 const Sequelize = require("sequelize");
 const sequelize = require("../config/db");
-
+const {UUIDV4 } = require("uuid");
+const {DataTypes,} = require("sequelize");
+const {v4 : uuidv4} = require('uuid')
 
 
 const people = sequelize.define("users", {
-    uuid: {
+    UUID: {
+        type: DataTypes.UUID,
+        defaultValue:uuidv4(),
+        allowNull: true,     
+    },
+    userName: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    userAge: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+        validate:{
+            len: { args: [2,3], msg: 'Invalid Age' },
+        }
         
+    },
+    userEmail: {
+        type: Sequelize.STRING,
+        allowNull: true,  
+    },
+    userPhone: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate:{
+            len: { args: [10,10], msg: 'Phone Number should be of 10 digits.' },
+        }
+    },
+    userAddress: {
+        type: Sequelize.STRING,
+        allowNull: true,   
+    },
+    userAadhar: {
+        type: Sequelize.INTEGER,
         allowNull: false,
         
-    },
-    name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
-    age: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-    },
-    email: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
-    phone: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-    },
-    address: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
-    aadhar: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
         primaryKey:true,
         onDelete:'CASCADE'
 
@@ -53,8 +62,6 @@ const people = sequelize.define("users", {
     
 
 })
-
-
 const Company = sequelize.define("companies", {
     doc_id: {
         type: Sequelize.INTEGER,
@@ -64,7 +71,7 @@ const Company = sequelize.define("companies", {
         
         references: {
             model: people,
-            key: 'aadhar'
+            key: 'userAadhar'
         }
     },
 
@@ -72,7 +79,7 @@ const Company = sequelize.define("companies", {
             type: Sequelize.STRING,
             allowNull: false,
         },
-        pos: {
+        position: {
             type: Sequelize.STRING,
             allowNull: false,
         },
@@ -98,19 +105,14 @@ const Company = sequelize.define("companies", {
     module.exports = {people,Company}    
     
 
-    people.hasOne(Company, { 
-        foreignKey:"doc_id",
-        sourceKey:"aadhar",
-        onDelete:'CASCADE',
-        hooks:true
-    });
-    Company.belongsTo(people,{
-        foreignKey:"doc_id",
-        sourceKey:"aadhar",
-        onDelete:'CASCADE',
-        hooks:true
+    people.Company=people.hasOne(Company,{
+        foreignKey:'doc_id'
+    })
 
-    });
+
+    Company.people=Company.belongsTo(people,{
+        foreignKey:'doc_id'
+    })
  
     
 

@@ -1,6 +1,6 @@
 const graphql = require('graphql');
 const { Company } = require('../../models/Tables');
-const CompanyType = require('./CompType');
+const CompanyType = require('./CompanyType');
 
 const {
     GraphQLObjectType,
@@ -16,16 +16,18 @@ const UserType = new GraphQLObjectType({
     name: 'user',
     fields: () => ({
 
-        uuid: { type: GraphQLInt },
-        name: { type: GraphQLString },
-        age: { type: GraphQLInt },
-        email: { type: GraphQLString },
-        phone: { type: GraphQLInt },
-        address: { type: GraphQLString },
-        aadhar: { type: GraphQLInt },
-        doc_id:{type:GraphQLInt},
-        company: { type:CompanyType },
-       
+
+        userName: { type: GraphQLString },
+        userAge: { type: GraphQLInt },
+        userEmail: { type: GraphQLString },
+        userPhone: { type: graphql.GraphQLFloat },
+        userAddress: { type: GraphQLString },
+        userAadhar: { type: GraphQLInt },
+        doc_id: { type: GraphQLInt },
+        Company: { type: GraphQLString },
+        position: { type: GraphQLString },
+        location: { type: GraphQLString },
+
     }),
 
 })
